@@ -1,5 +1,4 @@
 // ======================================================
-// MEMBER 1 START: 
 // Structs, Person (Abstract), Customer, Room, Booking
 // Object Arrays, Searching, and Sorting
 // ======================================================
