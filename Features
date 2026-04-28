@@ -1,0 +1,34 @@
+The main fetaures of the Hotle Managment System are listed as below:
+1. Room Booking
+  View available rooms
+  Book room
+  Cancel booking
+  Update booking
+2. Customer Registration
+   Add customer details
+   Search customer
+   Update customer
+   Delete customer
+3. Billing System
+   Room charges
+   Food charges
+   Service charges
+   Automatic bill generation
+4. Employee Management
+   Add employee
+   Remove employee
+   Update employee details
+5. Admin Control
+   View all records
+   Delete records
+   Generate reports
+   File management
+6. File Handling
+   Save customer records
+   Save booking details
+   Save employee details
+   Read records from files
+7. Exception Handling
+   Invalid room number
+   Invalid customer input
+   Invalid billing values
