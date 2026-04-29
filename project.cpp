@@ -88,3 +88,74 @@ public:
         cout << "Payment: " << paymentMethod << " (" << paymentStatus << ")\n";
     }
 };
+class Room {
+private:
+    int roomNumber;
+    string roomType;
+    float price;
+    bool isAvailable;
+
+public:
+    static int totalRooms;
+
+    Room() {
+        roomNumber = 0;
+        roomType = "Standard";
+        price = 0;
+        isAvailable = true;
+        totalRooms++;
+    }
+
+    Room(int roomNumber, string roomType, float price, bool isAvailable) {
+        this->roomNumber = roomNumber;
+        this->roomType = roomType;
+        this->price = price;
+        this->isAvailable = isAvailable;
+        totalRooms++;
+    }
+
+    float operator+(Room r) {
+        return this->price + r.price;
+    }
+
+    void displayRoom() {
+        cout << "Room Number: " << roomNumber << " (" << roomType << ") - Rs." << price << " - " << (isAvailable ? "Available" : "Booked") << endl;
+    }
+
+    float getPrice() {
+        return price;
+    }
+};
+
+int Room::totalRooms = 0;
+
+class Booking {
+private:
+    Customer customer;
+    Room room;
+    Date checkIn;  // Using struct inside class
+    Date checkOut;
+
+public:
+    void createBooking(Customer c, Room r) {
+        customer = c;
+        room = r;
+
+        cout << "Enter Check-In Date (DD MM YYYY format): ";
+        cin >> checkIn.day >> checkIn.month >> checkIn.year;
+
+        cout << "Enter Check-Out Date (DD MM YYYY format): ";
+        cin >> checkOut.day >> checkOut.month >> checkOut.year;
+
+        cout << "\nBooking Created Successfully!\n";
+    }
+
+    void displayBooking() {
+        cout << "\n===== Booking Details =====\n";
+        customer.display();
+        room.displayRoom();
+        cout << "Check-In: " << checkIn.day << "/" << checkIn.month << "/" << checkIn.year << endl;
+        cout << "Check-Out: " << checkOut.day << "/" << checkOut.month << "/" << checkOut.year << endl;
+    }
+};
+
