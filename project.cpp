@@ -158,4 +158,12 @@ public:
         cout << "Check-Out: " << checkOut.day << "/" << checkOut.month << "/" << checkOut.year << endl;
     }
 };
-
+// Searching object in an array - Returning Object from Function
+Customer searchCustomer(Customer arr[], int size, int searchId) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i].getID() == searchId) {
+            return arr[i]; 
+        }
+    }
+    return Customer("Not Found", 0, "", 0, 0, "", "");
+}
