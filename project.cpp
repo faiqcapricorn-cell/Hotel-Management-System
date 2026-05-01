@@ -167,3 +167,16 @@ Customer searchCustomer(Customer arr[], int size, int searchId) {
     }
     return Customer("Not Found", 0, "", 0, 0, "", "");
 }
+// Sorting Objects in an array (Bubble Sort without built-in functions)
+void sortRoomsByPrice(Room arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j].getPrice() > arr[j + 1].getPrice()) {
+                Room temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
